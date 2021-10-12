@@ -1,2 +1,2 @@
-# boxchat
-boxchat
+# chat-realtime-nodejs
+Realtime chat using NodeJS Express

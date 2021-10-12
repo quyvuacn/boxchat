@@ -1,0 +1,56 @@
+.boxchat{
+    width: 250px;
+    height: 442px;
+    background-color: red;
+    border-radius: 5px;
+}
+
+#thread{
+    display: block;
+    width: 200px;
+    height: 400px;
+    background-color: aquamarine;
+    position: relative;
+    left: 5px;
+    top: 5px;
+    list-style-type:none;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow:auto;
+}
+
+.li{
+    display: block;
+    min-height: 20px;
+    border-radius: 2px;
+    line-height: 25px;
+    right: 30px;
+    position: relative;
+
+}
+
+#form{
+    border-radius: 5px;
+    display: block;
+    background-color: red;
+    height: 30px;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+    top: -8px;
+    margin: 0 5px;
+}
+
+#message{
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+
+#submit{
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
