@@ -6,7 +6,7 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: `https://app-chat-socketio-real-time.herokuapp.com/auth/google/callback`,
+    callbackURL: `https://app-chat-socketio-real-time.herokuapp.com//auth/google/callback`,
     passReqToCallback: true,
   },
   function(request, accessToken, refreshToken, profile, done) {

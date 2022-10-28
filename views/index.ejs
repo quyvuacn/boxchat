@@ -2,7 +2,9 @@
     <head>
       <title> Real Time Chat </title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="style.css" />
+
     </head>
     <body>
         <style>
@@ -56,7 +58,7 @@
            }
         </style>
         <h1>Box chat</h1>
-        <span>Chào mừng <%= user.displayName %> đến với boxchat</span>
+        <span>Chào mừng <%= user.displayName %> đến với boxchat <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a></span>
         <input hidden id="name" type="text" value="<%=user.displayName %> ">
         <input hidden id="id" type="text" value="<%= user.id %> ">
         <input hidden id="path" type="text" value="<%= user.picture %> ">
