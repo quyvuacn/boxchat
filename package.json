@@ -15,7 +15,11 @@
   "author": "toanbn",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.16.3",
+    "express-session": "^1.17.3",
+    "passport": "^0.6.0",
+    "passport-google-oauth2": "^0.2.0",
     "randomcolor": "^0.6.2",
     "socket.io": "^2.1.1"
   }
