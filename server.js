@@ -22,6 +22,4 @@ io.on('connection', function (client) {
         client.broadcast.emit('thread',data);
     });
 });
-server.listen(port,function(){
-    console.log("Listening on port " + port);
-});
+server.listen(port)
