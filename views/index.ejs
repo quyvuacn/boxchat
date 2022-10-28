@@ -1,0 +1,85 @@
+<html>  
+    <head>
+      <title> Real Time Chat </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <style>
+            body{
+                text-align: center;
+            }
+            li{
+                max-width: 80%;
+                list-style: none;
+                display: flex;
+                gap: 6px;
+                align-items: flex-end;
+                width: 100%;
+                margin-top: 12px;
+                padding: 0 6px;
+                position: relative;
+            }
+            li img{
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+            }
+            li span{
+                background-color: #e4e6eb;
+                padding: 8px;
+                border-radius: 12px;
+            }
+            #thread{
+            padding: 0;
+            padding-bottom: 4px;
+            width: 240px;
+            background: #FFF;
+           }
+           .myseft{
+            justify-content: end;
+            float: right;
+           }
+           .myseft span{
+                background-color: #0084ff;
+                color: #fff;
+           }
+           .hide_username{
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 4px;
+            font-size: 12px;
+            border-radius: 4px;
+            left: 0;
+            transform: translateX(-95%);
+           }
+        </style>
+        <h1>Box chat</h1>
+        <span>Chào mừng <%= user.displayName %> đến với boxchat</span>
+        <input hidden id="name" type="text" value="<%=user.displayName %> ">
+        <input hidden id="id" type="text" value="<%= user.id %> ">
+        <input hidden id="path" type="text" value="<%= user.picture %> ">
+        <div class="boxchat">  
+
+        
+            <ul id="thread">
+              
+            </ul>
+        
+        
+        <form id="form">
+            <input id="message" type="text" placeholder="message">
+            <input id="submit" type="submit" value="Send">
+        </form>
+        </div>
+        <ul>
+            
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+        <script src="/socket.io/socket.io.js"></script>
+
+        <script src="client.js"></script>  
+    </body>
+ </html>

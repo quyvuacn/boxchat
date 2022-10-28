@@ -1,8 +1,9 @@
 .boxchat{
     width: 250px;
-    height: 442px;
-    background-color: red;
+    height: 446px;
+    background-color: #555;
     border-radius: 5px;
+    margin: 0 auto;
 }
 
 #thread{
@@ -32,7 +33,7 @@
 #form{
     border-radius: 5px;
     display: block;
-    background-color: red;
+    background-color: #555;
     height: 30px;
     justify-content: space-between;
     display: flex;
