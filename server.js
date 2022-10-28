@@ -50,7 +50,6 @@ function isLoggedIn(req, res, next) {
   }
 
 app.get('/',isLoggedIn ,function (req, res) {
-    
     res.render('index',{user : req.user});
 });
 
