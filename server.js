@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var port = process.env.PORT || 8000
 
 var server = require('http').createServer(app);
 
@@ -21,4 +22,4 @@ io.on('connection', function (client) {
         client.broadcast.emit('thread',data);
     });
 });
-server.listen(8000);
+server.listen(port);

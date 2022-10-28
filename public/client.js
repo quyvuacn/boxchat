@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:8000');
+var socket = io.connect(window.location.href);
 socket.on('connect', function (data) {
     var name=prompt('Hay nhap ten hien thi')
     socket.emit('join',name);
