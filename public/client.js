@@ -1,17 +1,13 @@
 var socket = io.connect(window.location.href)
-
 socket.on("connect", function (data) {
-	var name = prompt("Mời bạn nhập tên hiển thị") || "Guest"
+	var name = prompt("Hay nhap ten hien thi") || "Guest"
 	socket.emit("join", name)
-	userID = socket.id
 
 	$("form").submit(function () {
 		var message = $("#message").val()
 		socket.emit("messages", {
-			id: userID,
 			name: name,
 			message: message,
-			path,
 		})
 		this.reset()
 		return false
@@ -20,18 +16,7 @@ socket.on("connect", function (data) {
 
 //listen thread event
 socket.on("thread", function (data) {
-	if (data.id == sessionStorage.getItem("userID")) {
-		$("#thread").append(`
-        <li class="myseft">
-            <span>${data.message}</span>
-        </li>
-        `)
-	} else {
-		$("#thread").append(`
-            <li>
-                <img src="${data.path}" alt="">
-                <span>${data.message}</span>
-            </li>
-        `)
-	}
+	$("#thread").append(
+		'<li class="li">' + data.name + ": " + data.message + "</li>",
+	)
 })
